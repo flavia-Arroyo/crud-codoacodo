@@ -23,7 +23,7 @@
         </div>
         <div class="col-md-7 col-lg-8" >
             <form id="formAgregarAlumno" action="${pageContext.request.contextPath}/app?accion=view&id=${alumnoAVer.id}"
-                  method="post" class="was-validated border p-4 rounded-3 bg-light">
+                  method="post" class="border p-4 rounded-3 bg-light">
                 <div class="row">
                     <div class="col-sm-6 mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
@@ -50,13 +50,14 @@
                             <a href="${pageContext.request.contextPath}/app" class="btn btn-secondary">Volver atrás</a>
                             
                         </div>
-                        <div class="col-4">
-                            <a href="${pageContext.request.contextPath}/app?accion=edit&id=${alumnoAVer.id}" class="btn bg-warning w-100"><i class="bi bi-pencil"></i></a>
+                         <div class="d-flex">
+                                <div class="col-4 md-2">
+                                    <a href="${pageContext.request.contextPath}/app?accion=edit&id=${alumnoAVer.id}" class="btn bg-warning w-100"><i class="bi bi-pencil"></i></a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="${pageContext.request.contextPath}/app?accion=remove&id=${alumnoAVer.id}" class="btn bg-danger text-light w-100"><i class="bi bi-trash3"></i></a>
+                                </div>
                         </div>
-                        <div class="col-4">
-                            <a href="${pageContext.request.contextPath}/app?accion=remove&id=${alumnoAVer.id}" class="btn bg-danger text-light w-100"><i class="bi bi-trash3"></i></a>
-                        </div>
-                    </div>
                 </div>
             </form>
         </div>
